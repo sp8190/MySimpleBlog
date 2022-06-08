@@ -1,6 +1,8 @@
+// 제네릭이란 타입을 마치 함수의 파라미터처럼 사용하는 것
+
 import React, { FunctionComponent } from 'react'
 
-type TextProps = {
+interface TextProps { // FunctionComponent 타입에 TextProps Generic을 추가
   text: string
 }
 
