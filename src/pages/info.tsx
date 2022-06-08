@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby' // graphql import
 import Text from 'components/Text'
+import { Link } from 'gatsby'
 
 /*
 src/pages 내의 모든 파일의 이름을 통해 페이지에 접근할 수 있게 구현할 예정
@@ -25,21 +26,21 @@ type InfoPageProps = {
 }
 
 const InfoPage: FunctionComponent<InfoPageProps> = function ({
-  data: {
-    site: {
-      siteMetadata: { title, description, author },
+    data: {
+      site: {
+        siteMetadata: { title, description, author },
+      },
     },
-  },
-}) {
-  return (
-    <div>
-      <Text text={title} />
-      <Text text={description} />
-      <Text text={author} />
-      <a href="/">To Main</a>
-    </div>
-  )
-}
+  }) {
+    return (
+      <div>
+        <Text text={title} />
+        <Text text={description} />
+        <Text text={author} />
+        <Link to="/">To Main</Link>
+      </div>
+    )
+  }
 
 export default InfoPage
 

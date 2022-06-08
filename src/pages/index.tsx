@@ -1,14 +1,16 @@
 import React, { FunctionComponent } from 'react'
 import Text from 'components/Text'
+import { Link } from 'gatsby'
+// 리액트에서 했던 것 처럼 Link API 를 통한 페이지 이동
+
 
 const IndexPage: FunctionComponent = function () {
   return (
-    // return <Text text={10} /> // error TS2322: Type 'number' is not assignable to type 'string'. 타입스크립트 오류 예시
     <div>
       <Text text="Hello, World!" />
-      <a href="/info/">To Info</a>
+      <Link to="/info/">To Info</Link> 
     </div>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
