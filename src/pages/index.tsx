@@ -1,16 +1,23 @@
 import React, { FunctionComponent } from 'react'
-import Text from 'components/Text'
-import { Link } from 'gatsby'
-// 리액트에서 했던 것 처럼 Link API 를 통한 페이지 이동
+import styled from '@emotion/styled'
+import GlobalStyle from 'components/Common/GlobalStyle'
+import Introduction from 'components/Main/Introduction'
+import Footer from 'components/Common/Footer'
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`
 
 const IndexPage: FunctionComponent = function () {
   return (
-    <div>
-      <Text text="Hello, World!" />
-      <Link to="/info/">To Info</Link> 
-    </div>
-  );
-};
+    <Container>
+      <GlobalStyle />
+      <Introduction />
+      <Footer />
+    </Container>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
